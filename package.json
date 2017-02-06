@@ -1,0 +1,37 @@
+{
+  "name": "adminTools",
+  "version": "1.0.0",
+  "description": "Angular 2, TypeScript and Webpack",
+  "scripts": {
+    "postinstall": "typings install",
+    "copy": "node copy",
+    "build": "webpack",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 8000"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
+    "core-js": "^2.4.0",
+    "ng2-bootstrap": "^1.0.24",
+    "ng2-modal": "0.0.18",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.17"
+  },
+  "devDependencies": {
+    "angular2-template-loader": "^0.4.0",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "0.8.2",
+    "typescript": "1.8.10",
+    "typings": "^1.0.4",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
+  }
+}
