@@ -2,7 +2,8 @@ import { Component,
   Input,
   EventEmitter,
   Output,
-  ChangeDetectionStrategy } from 'angular2/core';
+  ChangeDetectionStrategy } from '@angular/core';
+import { TodoState } from '../../reducers/todos'
 
 @Component({
   selector: 'rio-todo-item',
@@ -20,7 +21,7 @@ import { Component,
   `
 })
 export class RioTodoItem {  
-  @Input() todo: any;
+  @Input() todo: TodoState;
   @Output() todoCompleted: EventEmitter<any> = new EventEmitter();
   @Output() todoEdited: EventEmitter<any> = new EventEmitter();
   @Output() todoDeleted: EventEmitter<any> = new EventEmitter();

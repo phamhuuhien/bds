@@ -1,0 +1,55 @@
+.header-container {
+    min-width: 1006px;
+    background: #183544;
+    transition: background .3s linear;
+    height: 80px;
+}
+
+.header-content {
+	width: 1200px;
+    z-index: 2;
+    padding: 16px 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-search {
+	width: 643px;
+    margin: 0 0 0 204px;
+    float: left;
+    box-shadow: 0 3px 0 0 rgba(0,0,0,.22);
+    position: relative;
+}
+
+.logo {
+	position: absolute;
+}
+
+.input-group__textbox {
+    display: table-cell;
+    border: none;
+    background: 0 0;
+    height: 38px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+    width: 100%;
+    position: relative;
+    z-index: 6;
+    color: #000;
+}
+
+.input-group__button_type_search {
+	width: 43px;
+}
+
+.input-group__button {
+	border: none;
+    background: 0 0;
+    display: block;
+    height: 38px;
+    margin: 0;
+    line-height: 100%;
+    padding: 0;
+    position: relative;
+}

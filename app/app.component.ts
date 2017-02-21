@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
+import { AppState, INITIAL_STATE } from './reducers'
+import rootReducer from './reducers/index';
+const createLogger = require('redux-logger');
+import thunk from 'redux-thunk';
+import { NgRedux } from '@angular-redux/store';
 
 @Component({
   selector: 'my-app',
   template: `
-    Hello moto
+    <header></header>
+    <todo-page></todo-page>
   `
 })
 export class AppComponent {
+	constructor(ngRedux: NgRedux<AppState>) {
+      ngRedux.configureStore(
+        rootReducer,
+        INITIAL_STATE,
+        [ createLogger() ]);
+  	}
 }

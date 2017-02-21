@@ -1,44 +1,32 @@
-import 'NgRedux' from 'ng2-redux';  
-import { AsyncPipe } from 'angular2/common';
-import {  
-  deleteTodo,
-  editTodo,
-  completeTodo
- } from '../actions/todo';
- import { RioTodoItem } from '../components';
+import { Component, OnInit } from '@angular/core'; 
+import { Observable } from 'rxjs';
+import { NgRedux, select } from '@angular-redux/store';
+import { RioTodoItem } from '../components';
+import { AppState } from '../reducers'
+import { TodoState } from '../reducers/todos'
+import { TodoActions } from '../actions/todoActions'
+
 
 @Component({
     selector: 'todo-page',
-    pipes: [AsyncPipe],
     template: `
       <ul>  
-        <li *ngFor="#todo of todos$ | async">
-        <rio-todo-item [todo]="todo"
-             (todoCompleted)="completeTodo($event)"
-             (todoDeleted)="deleteTodo($event)"
-             (todoEdited)="editTodo($event)">
-        </rio-todo-item>
+        <li *ngFor="let todo of todos$ | async">
+          <rio-todo-item 
+               [todo]="todo"
+             (todoDeleted)="actions.deleteTodo($event)">
+          </rio-todo-item>
+        </li>
       </ul> 
+      <button (click)="actions.addTodo('aaa')">Add</button>
      `
 })
-
 export class RioTodoPage implements OnInit {  
-  todos$: Observable<any>
-  constructor(private ngRedux: NgRedux) { }
+  todos$: Observable<TodoState>;
+  constructor(public ngRedux: NgRedux<AppState>,
+              private actions: TodoActions) { }
 
   ngOnInit() {
     this.todos$ = this.ngRedux.select('todos')
-  }
-
-  completeTodo(id: number): void {
-     this.ngRedux.dispatch(completeTodo(id));
-  }
-
-  deleteTodo(id: number): void {
-     this.ngRedux.dispatch(deleteTodo(id));
-  }
-
-  editTodo({id, text}: Todo): void {
-     this.ngRedux.dispatch(editTodo(id,text));
   }
 }
