@@ -6,12 +6,12 @@ import { NgReduxModule } from '@angular-redux/store';
 import { AppComponent }  from './app.component';
 import { RioTodoPage } from './containers/todo-page'
 import { BdsPage } from './containers/bds/bds-page.container'
-import { RioTodoItem, Header, BdsItem } from './components'
+import { RioTodoItem, Header, BdsItem, Footer } from './components'
 import { TodoActions } from './actions/todoActions'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NgReduxModule],
-  declarations: [ AppComponent, RioTodoPage, RioTodoItem, Header, BdsItem, BdsPage ],
+  declarations: [ AppComponent, RioTodoPage, RioTodoItem, Header, Footer, BdsItem, BdsPage ],
   providers:    [ TodoActions ],
   bootstrap:    [ AppComponent ]
 })

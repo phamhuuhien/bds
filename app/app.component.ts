@@ -10,6 +10,7 @@ import { NgRedux } from '@angular-redux/store';
   template: `
     <header></header>
     <bds-page></bds-page>
+    <bds-footer></bds-footer>
   `
 })
 export class AppComponent {
