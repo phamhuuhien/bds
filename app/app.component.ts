@@ -9,7 +9,7 @@ import { NgRedux } from '@angular-redux/store';
   selector: 'my-app',
   template: `
     <header></header>
-    <todo-page></todo-page>
+    <bds-page></bds-page>
   `
 })
 export class AppComponent {

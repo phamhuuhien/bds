@@ -11,15 +11,10 @@ import { Component } from '@angular/core';
     		</a>
 		</div>
 		<div class="header-search">
-            <div class="input-group">
-                <input class="input-group__textbox" type="text" placeholder="Tìm kiếm sản phẩm, thương hiệu hay nhãn hàng mong muốn …" value="" id="searchInput" name="q">
-                <div class="input-group__button-container">
-                    <button class="input-group__button input-group__button_type_search" id="searchSubmit">
-                        <span class="input-group__icon">
-                            <i class="icon icon-magnify-header"></i>
-                        </span>
-                    </button>
-                </div>
+            <input class="input-group__textbox" type="text" placeholder="Tìm kiếm sản phẩm, thương hiệu hay nhãn hàng mong muốn …" value="" id="searchInput" name="q">
+            <div class="button-group">
+                <button class="search-button" id="searchSubmit">
+                </button>
             </div>
 		</div>
     </div>
