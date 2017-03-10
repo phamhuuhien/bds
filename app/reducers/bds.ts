@@ -10,42 +10,42 @@ export const BDS_INITIAL_STATE = [
   {
     id: 0,
     name: 'Nha biet thu khu dao xanh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 3000000000,
     time: '27-2-2017'
   },
   {
 	id: 1,
     name: 'Nha nguyen van linh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 5000000000,
     time: '27-2-2017'
   },
   {
 	id: 2,
     name: 'Nha nguyen van linh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 5000000000,
     time: '27-2-2017'
   },
   {
 	id: 3,
     name: 'Nha nguyen van linh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 5000000000,
     time: '27-2-2017'
   },
   {
 	id: 4,
     name: 'Nha nguyen van linh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 5000000000,
     time: '27-2-2017'
   },
   {
 	id: 5,
     name: 'Nha nguyen van linh',
-    image: 'http://orig00.deviantart.net/c0e6/f/2011/278/a/9/200x200_icon__horse_by_tearsofablackwolf-d4bwnab.jpg',
+    image: 'https://static.chotot.com.vn/mob_thumbs_app/32/3216564769.jpg',
     price: 5000000000,
     time: '27-2-2017'
   }
@@ -55,6 +55,9 @@ export interface BdsState extends Array<Bds> { };
 
 export function bds(state: BdsState = [], action): BdsState {
   switch (action.type) {
+  	case 'LOAD_BDS':
+  		let bdsArr = action.bdsArr.map(item => { return {'id': item.list_id, 'name': item.subject, 'image': item.image, 'prices': item.price_string, 'time': item.date}});
+  		return bdsArr;
     default:
       return state;
   }

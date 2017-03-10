@@ -4,6 +4,7 @@ import { NgRedux, select } from '@angular-redux/store';
 import { BdsItem } from '../../components';
 import { AppState } from '../../reducers'
 import { BdsState } from '../../reducers/bds'
+import { BdsActions } from '../../actions/bdsActions'
 
 
 @Component({
@@ -19,6 +20,9 @@ import { BdsState } from '../../reducers/bds'
 })
 export class BdsPage {  
   @select('bds') readonly bdss$: Observable<BdsState>;
-  constructor(public ngRedux: NgRedux<AppState>) { }
+  constructor(public ngRedux: NgRedux<AppState>,
+    private actions: BdsActions) {
+      actions.loadBds()
+    }
 
 }

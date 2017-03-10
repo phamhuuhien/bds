@@ -3,16 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }     from '@angular/http';
 import { NgReduxModule } from '@angular-redux/store';
+
 import { AppComponent }  from './app.component';
 import { RioTodoPage } from './containers/todo-page'
 import { BdsPage } from './containers/bds/bds-page.container'
 import { RioTodoItem, Header, BdsItem, Footer } from './components'
 import { TodoActions } from './actions/todoActions'
+import { BdsActions } from './actions/bdsActions'
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, NgReduxModule],
   declarations: [ AppComponent, RioTodoPage, RioTodoItem, Header, Footer, BdsItem, BdsPage ],
-  providers:    [ TodoActions ],
+  providers:    [ TodoActions, BdsActions ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

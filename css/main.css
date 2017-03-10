@@ -1,3 +1,10 @@
 body {
 	background-color: rgb(241,241,241);
 }
+
+html {
+	height: calc(100% - 16px);
+}
+body {
+	height: 100%;
+}

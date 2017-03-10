@@ -5,8 +5,30 @@
 .bds-item-container {
 	display: inline-block;
     padding: 5px;
+    width: 250px;
+    height: 240px;
+    border: 1px solid #20be51;
+    border-radius: 3px;
+    margin-top: 5px;
 }
 
 .bds-item-container:hover {
 	cursor: pointer;
+	border: 1px solid red;
+}
+
+.image {
+	width: 200px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.item-name {
+	font-weight: bold;
+	position: absolute;
+	color: white;
+	width: inherit;
+    background-color: rgba(0,0,0,0.5);
+    height: 40px;
+    width: inherit;
 }

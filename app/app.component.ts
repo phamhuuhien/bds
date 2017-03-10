@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { AppState, INITIAL_STATE } from './reducers'
 import rootReducer from './reducers/index';
 const createLogger = require('redux-logger');
-import thunk from 'redux-thunk';
 import { NgRedux } from '@angular-redux/store';
 
 @Component({
