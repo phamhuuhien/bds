@@ -1,10 +1,27 @@
-body {
-	background-color: rgb(241,241,241);
-}
-
 html {
 	height: calc(100% - 16px);
+	font-size: 62.5%;
 }
 body {
 	height: 100%;
+	background-color: #eee;
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 1.6em;
+	line-height: 1.6;
+	color: #666;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #3498db;
+}
+	a:hover {
+		color: #2980b9;
+	}
+
+h2 {
+	line-height: 1.2;
+	margin-bottom: 1.6rem;
 }

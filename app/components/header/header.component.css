@@ -3,6 +3,9 @@
     background: #183544;
     transition: background .3s linear;
     height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .header-content {
@@ -63,4 +66,9 @@
     display: table-cell;
     background: #f36f36;
     z-index: 3;
+}
+
+.logo__image {
+	margin-top: -30px;
+    height: 100px;
 }

@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   <div class="header-container">
     <div class="header-content">
     	<div class="logo">
-    		<a href="http://www.lazada.vn/" class="logo__anchor">
-                <img class="logo__image" src="http://vn-live-02.slatic.net/images/2014/logo/vn.png" width="124" height="39" alt="Mua sắm online Lazada.vn Logo">
+    		<a href="#" class="logo__anchor">
+                <img class="logo__image" src="./images/icon.png" alt="Mua sắm online Lazada.vn Logo">
     		</a>
 		</div>
 		<div class="header-search">

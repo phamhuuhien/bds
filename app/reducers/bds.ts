@@ -56,7 +56,7 @@ export interface BdsState extends Array<Bds> { };
 export function bds(state: BdsState = [], action): BdsState {
   switch (action.type) {
   	case 'LOAD_BDS':
-  		let bdsArr = action.bdsArr.map(item => { return {'id': item.list_id, 'name': item.subject, 'image': item.image, 'prices': item.price_string, 'time': item.date}});
+  		let bdsArr = action.bdsArr.map(item => { return {'id': item.list_id, 'name': item.subject, 'image': item.image, 'price': item.price_string, 'time': item.date, 'account_name': item.account_name}});
   		return bdsArr;
     default:
       return state;

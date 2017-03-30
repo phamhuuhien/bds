@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -13,7 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.ts', '.js']
   },
-  //devtool: 'source-map',
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -31,13 +32,12 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     })
-    // add uglify for release
+    //add uglify for release
     // new webpack.optimize.UglifyJsPlugin({
     //  sourceMap: false,
     //  mangle: false,
     //  compress: {
     //    warnings: false
     //  }
-    // })
   ]
 }
