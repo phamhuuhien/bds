@@ -11,9 +11,9 @@ import { BdsActions } from '../../actions/bdsActions'
     selector: 'bds-page',
     template: `
           <div class="bds-page-container">
-            <new-item *ngFor="let bds of bdss$ | async"
+            <bds-item *ngFor="let bds of bdss$ | async"
                [bds]="bds">
-            </new-item>
+            </bds-item>
           </div>
      `,
      styleUrls: ['./bds-page.container.css']
